@@ -46,7 +46,7 @@ class ArmstrongNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("write any Number: ");
+        System.out.print("write any Number:- ");
         int n = sc.nextInt();
 
         if (isArmstrong(n))
