@@ -38,6 +38,8 @@ class Palindrome {
 
         //recursive call
         return palindromeCheck(arr, left + 1, right - 1);
+
+        // return (arr[left] == arr[right] && checkPalindrome(arr, left + 1, right - 1));
     }
 
     public static void main(String[] args) {
