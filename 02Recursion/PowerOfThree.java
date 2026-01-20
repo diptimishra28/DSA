@@ -30,5 +30,7 @@ public class PowerOfThree {
         else {
             System.out.println("Not a power of three");
         }
+
+        sc.close();
     }
 }
