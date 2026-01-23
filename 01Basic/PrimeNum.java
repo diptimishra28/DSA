@@ -51,6 +51,7 @@ class PrimeNum{
         else {
             System.out.println("Not Prime");
         }        
-
+        
+        sc.close();
     }
 }
