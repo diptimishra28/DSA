@@ -39,22 +39,18 @@ public class CountElement {
             }
         }
 
-        // Convert keys to array (no for-each)
-        Object[] keys = hm.keySet().toArray();
-
-        // Step 2: Find maximum frequency
         int maxFreq = 0;
-        for (int i = 0; i < keys.length; i++) {
-            int freq = hm.get(keys[i]);
-            if (freq > maxFreq) {
-                maxFreq = freq;
+
+        for (Integer key : hm.keySet()) {
+            int value = hm.get(key);
+            if(maxFreq <= value) {
+                maxFreq = value;
             }
         }
 
         // Step 3: Sum frequencies equal to maxFreq
         int result = 0;
-        for (int i = 0; i < keys.length; i++) {
-            int freq = hm.get(keys[i]);
+        for (Integer freq : hm.values()) {
             if (freq == maxFreq) {
                 result += freq;
             }
@@ -75,7 +71,7 @@ public class CountElement {
         int[] nums = new int[n];
 
         // input elements
-        System.out.println("Enter elements:");
+        System.out.print("Enter elements:");
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();
         }
